@@ -1,0 +1,191 @@
+:root {
+    --purple: #823473;
+    --midPurple: #a95699;
+    --lightPurple: #efe5ff;
+    --black: #191919;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Serif 4", serif;
+    font-size: 16px;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+    border-radius: 5px;
+}
+
+body {
+    background: var(--black);
+    color: var(--lightPurple);
+}
+a {
+    color: var(--lightPurple);
+    text-decoration: none;
+}
+a::after {
+    content: '';
+    display: block;
+    border-bottom: 0.01rem solid var(--lightPurple);
+    transform: scaleX(0);
+    transition: 0.15s linear;
+}
+a:hover::after {
+    transform: scaleX(1);
+    transition: 0.15s linear;
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 1);
+}
+nav {
+    background: var(--purple);
+    color: var(--lightPurple);
+
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 3rem;
+    font-size: 0.5rem;
+    border-radius: 0 0 1rem 1rem;
+    width: 100vw;
+}
+nav .link {
+    display: flex;
+    gap: 4rem;
+}
+
+/* HEADER */
+.header {
+    background-image: url('asset/header-image.png');
+    background-size: cover; /* Ukuran gambar menyesuaikan ukuran elemen */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background-position: center; /* Memposisikan gambar di tengah elemen */
+    height: 500px; /* Anda bisa menyesuaikan tinggi elemen sesuai kebutuhan */
+    width: 100%; /* Lebar elemen mengambil seluruh lebar kontainer */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PROFILE */
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3rem;
+
+    color: #ffffff;
+}
+.profile .profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25rem;
+    overflow: hidden;
+}
+.profile .profile-image img {
+    width: 10rem;
+    height: 10rem;
+}
+.profile .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.profile .profile-info .title {
+    font-size: 4rem;
+    font-weight: 700;
+}
+.profile .profile-info-detail {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.profile .profile-info-detail .faction-info{
+    font-size: 0.75rem;
+}
+.profile .profile-info-detail .social {
+    display: flex;
+    gap: 1rem;
+}
+.profile .profile-info-detail .social-icon:hover {
+    transform: translateY(-0.25rem);
+    transition: 0.25s ease-in-out all;
+}
+.profile .profile-info-detail .social img {
+    height: 1.75rem;
+}
+/* PLAYLISTS LIST */
+.playlists-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    width: 80vw;
+    overflow: auto;
+}
+
+/* PLAYLIST CARD */
+.playlist-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    cursor: pointer;
+
+    background: var(--purple);
+    color: var(--lightPurple);
+    height: 15rem;
+    width: 12rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(239, 229, 255, 0.25);
+    transition: 0.25s ease-in-out;
+}
+.playlist-card:hover {
+    background: var(--midPurple);
+    color: var(--lightPurple);
+    box-shadow: 0 1px 4px rgba(239, 229, 255, 0.15);
+    transition: 0.25s ease-in-out;
+}
+
+.playlist-card .image {
+    overflow: hidden;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playlist-card .image img {
+    width: 10rem;
+    height: 10rem;
+}
+.playlist-card .info .title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.playlist-card .info .date {
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+/* PLAYLISTS */
+.playlists {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+.playlists h2 {
+    font-size: 2rem;
+}
