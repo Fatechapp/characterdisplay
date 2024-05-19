@@ -127,7 +127,7 @@ nav .link {
     display: flex;
     gap: 2rem;
     justify-content: flex-start;
-    width: 80vw;
+    width: 100vw;
     overflow: auto;
 }
 
