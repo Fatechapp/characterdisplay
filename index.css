@@ -115,8 +115,12 @@ nav .link {
     display: flex;
     gap: 1rem;
 }
+.profile .profile-info-detail .social-icon {
+    opacity: 0.75;
+}
 .profile .profile-info-detail .social-icon:hover {
     transform: translateY(-0.25rem);
+    opacity: 1;
     transition: 0.25s ease-in-out all;
 }
 .profile .profile-info-detail .social img {
@@ -185,6 +189,7 @@ nav .link {
     flex-direction: column;
     justify-content: flex-start;
     gap: 2rem;
+    padding: 2.5rem 2rem;
 }
 .playlists h2 {
     font-size: 2rem;
